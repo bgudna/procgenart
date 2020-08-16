@@ -1,6 +1,9 @@
+//import processing.pdf.*;
+
 void setup() {
   size(600,600);
   background(0);
+ // beginRecord(PDF, "filename.pdf");
 
   for (int i = 1; i < 1000; i++) {
 
@@ -13,8 +16,9 @@ void setup() {
       sequence.append(1);
       //sequence.reverse();
       
-      float len = 50;
-      float angle = PI/5;
+      float len = 20;
+      //float angle = PI/7;
+      float angle = 0.75;
       
       resetMatrix();
       translate(width/2, height/2);
@@ -25,15 +29,16 @@ void setup() {
        if (value % 2 == 0) {
          rotate(angle);
          } else {
-         rotate(-angle);
+         rotate(-angle*10);
        }
-      stroke(255,255,255,15);
+      stroke(255,10);
       strokeWeight(2);
       line(0,0,len,0);
       translate(len, 0);
    }
 
 }
+ // endRecord();
 
 }
 
