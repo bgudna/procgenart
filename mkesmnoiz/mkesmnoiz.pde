@@ -3,7 +3,6 @@ PVector[] punktar = new PVector[10];
 void setup() {
   size(1200,600);
   
-  
   for (int i = 0; i < punktar.length; i++) {
    punktar[i] = new PVector(random(width), random(height));  
   }
@@ -22,13 +21,12 @@ void draw() {
             }
             int n = 0;
           float[] sorted = sort(distances);
-          float noise = map(sorted[n], 0, width/2,100,0);
+          float noise = map(sorted[n], 0, width/4,100,0);
           int onePX = x + y * width;
           pixels[onePX] = color(noise);
-  }
-  }
+          }
+    }
   updatePixels();
-  
   noLoop();
   
   for (PVector p : punktar) {
