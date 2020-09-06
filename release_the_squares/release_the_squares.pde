@@ -87,7 +87,6 @@ void draw(){
         break;   
 }
       
-      //line(a.x,a.y,b.x,b.y);
      }
    }
    
